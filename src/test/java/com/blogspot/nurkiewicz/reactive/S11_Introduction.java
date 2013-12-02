@@ -22,7 +22,9 @@ public class S11_Introduction {
 	@Test
 	public void subscribingToObservable() throws InterruptedException {
 		observable.subscribe((Weather w) ->
-				log.debug("Weather changed: {}", w.getTemperature()));
+				log.debug("Weather changed: {}", w.getTemperature())
+		);
+
 		TimeUnit.SECONDS.sleep(100);
 	}
 
@@ -32,7 +34,9 @@ public class S11_Introduction {
 	 */
 	@Test
 	public void mapAndFilter() {
-		final Observable<Float> temperatures = observable.map(weather -> weather.getTemperature());
+		final Observable<Float> temperatures = observable.
+				map(weather -> weather.getTemperature());
+
 		final Observable<Float> highTemp = temperatures.filter(t -> t > 30.0);
 		final Observable<Float> lowTemp = temperatures.filter(t -> t < 15.0);
 	}

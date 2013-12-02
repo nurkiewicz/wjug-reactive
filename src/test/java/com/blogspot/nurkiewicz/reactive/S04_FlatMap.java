@@ -40,7 +40,6 @@ public class S04_FlatMap extends AbstractFuturesTest {
 
 	@Test
 	public void thenAcceptIsPoor() throws Exception {
-
 		javaQuestions().thenAccept(document -> {
 			findMostInterestingQuestion(document).thenAccept(question -> {
 				googleAnswer(question).thenAccept(answer -> {

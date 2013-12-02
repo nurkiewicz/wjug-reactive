@@ -27,9 +27,6 @@ public class S12_Creating {
 				subscribe(s -> log.debug(s));
 	}
 
-	/**
-	 * Observable.range()
-	 */
 	@Test
 	public void range() throws InterruptedException {
 		Observable.range(1, 100).
@@ -41,9 +38,6 @@ public class S12_Creating {
 				subscribe(s -> log.debug(s));
 	}
 
-	/**
-	 * Observable.interval()
-	 */
 	@Test
 	public void interval() throws Exception {
 		Observable.interval(1, TimeUnit.SECONDS).
@@ -55,9 +49,6 @@ public class S12_Creating {
 		TimeUnit.MINUTES.sleep(1);
 	}
 
-	/**
-	 * Observable.create(subscriber -> )
-	 */
 	@Test
 	public void fromFunction() throws Exception {
 		Observable<Integer> obs = Observable.create(subscriber -> {

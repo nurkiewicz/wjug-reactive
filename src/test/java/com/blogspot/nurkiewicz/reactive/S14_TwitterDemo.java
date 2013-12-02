@@ -15,11 +15,6 @@ public class S14_TwitterDemo {
 
 	private final Observable<Status> twitter = TwitterObservable.create();
 
-	/**
-	 * map/filter/mapMany/take
-	 *
-	 * @throws Exception
-	 */
 	@Test
 	public void mapAndFilterButNoSubscriptions() throws Exception {
 		final Observable<String> reTweets = twitter.
@@ -51,6 +46,9 @@ public class S14_TwitterDemo {
 				forEach(s -> log.debug(s));
 	}
 
+	/**
+	 * Also: window()
+	 */
 	@Test
 	public void tweetsPerSecond() throws Exception {
 		final Observable<Integer> tweets = twitter.
