@@ -9,6 +9,9 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Future;
 
+/**
+ * Sources: <a href="https://github.com/nurkiewicz/wjug-reactive">github.com/nurkiewicz/wjug-reactive</a>
+ */
 public class S01_Introduction extends AbstractFuturesTest {
 
 	private static final Logger log = LoggerFactory.getLogger(S01_Introduction.class);
